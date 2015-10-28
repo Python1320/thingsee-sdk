@@ -131,8 +131,8 @@ int       unsetenv(const char *name);
 
 /* Process exit functions */
 
-void      exit(int status) noreturn_function;
-void      abort(void) noreturn_function;
+void      exit(int status);
+void      abort(void);
 #ifdef CONFIG_SCHED_ATEXIT
 int       atexit(CODE void (*func)(void));
 #endif

@@ -289,7 +289,7 @@ int pthread_detach(pthread_t thread);
  * thread.
  */
 
-void pthread_exit(pthread_addr_t value) noreturn_function;
+void pthread_exit(pthread_addr_t value);
 int  pthread_cancel(pthread_t thread);
 int  pthread_setcancelstate(int state, FAR int *oldstate);
 void pthread_testcancel(void);

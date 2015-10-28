@@ -118,8 +118,7 @@ struct userspace_s
 
   /* Task/thread startup routines */
 
-  void (*task_startup)(main_t entrypt, int argc, FAR char *argv[])
-    noreturn_function;
+  void (*task_startup)(main_t entrypt, int argc, FAR char *argv[]);
 #ifndef CONFIG_DISABLE_PTHREAD
   void (*pthread_startup)(pthread_startroutine_t entrypt,
     pthread_addr_t arg);
@@ -187,7 +186,7 @@ extern "C"
  ****************************************************************************/
 
 #if defined(CONFIG_BUILD_PROTECTED) && !defined(__KERNEL__)
-void task_startup(main_t entrypt, int argc, FAR char *argv[]) noreturn_function;
+void task_startup(main_t entrypt, int argc, FAR char *argv[]);
 #endif
 
 /****************************************************************************

@@ -131,9 +131,9 @@ extern "C"
  ****************************************************************************/
 
 #ifdef CONFIG_HAVE_FILENAME
-void up_assert(FAR const uint8_t *filename, int linenum) noreturn_function;
+void up_assert(FAR const uint8_t *filename, int linenum);
 #else
-void up_assert(void) noreturn_function;
+void up_assert(void);
 #endif
 
 #undef EXTERN
